@@ -1,0 +1,16 @@
+# PhishGuard - URL Phishing Detection Tool
+# Author: Your Name
+# Description: Detects suspicious URLs using rule-based analysis
+
+def banner():
+    print("===================================")
+    print("   PhishGuard - Phishing Detector  ")
+    print("===================================")
+
+def main():
+    banner()
+    url = input("Enter the URL to analyze: ")
+    print("URL received:", url)
+
+main()
+

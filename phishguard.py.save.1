@@ -1,0 +1,27 @@
+# PhishGuard - URL Phishing Detection Tool
+# Author: Mathivanan
+# PhishGuard - URL Phishing Detection Tool
+# Author: Mathivanan
+# PhishGuard - URL Phishing Detection Tool
+# Author: Mathivanan
+# PhishGuard - URL Phishing Detection Tool
+# Author: Mathivanan
+# PhishGuard - URL Phishing Detection Tool
+# Author: Mathivanan
+k    print("\n[+] URL Length:", length)
+
+    if length < 54:
+        print("[SAFE] URL length looks normal")
+    elif length <= 75:
+        print("[WARNING] URL length is suspicious")
+    else:
+        print("[DANGER] URL length is very long")
+
+
+def main():
+    banner()
+    url = input("Enter the URL to analyze: ")
+    check_url_length(url)
+
+
+main()
