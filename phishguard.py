@@ -1,0 +1,42 @@
+
+# PhishGuard - URL Phishing Detection Tool
+# Author: Mathivanan
+# Description: Detects suspicious URLs using rule-based analysis
+
+def banner():
+    print("===================================")
+    print("   PhishGuard - Phishing Detector  ")
+    print("===================================")
+
+
+def check_url_length(url):
+    length = len(url)
+    print("\n[+] URL Length:", length)
+
+    if length < 54:
+        print("[SAFE] URL length looks normal")
+    elif length <= 75:
+        print("[WARNING] URL length is suspicious")
+    else:
+        print("[DANGER] URL length is very long")
+
+import re
+
+def check_ip_address(url):
+    ip_pattern = re.compile(
+        r'((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}'
+        r'(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'
+    )
+
+    if ip_pattern.search(url):
+        print("[DANGER] URL contains IP address")
+    else:
+        print("[SAFE] No IP address found in URL")
+
+def main():
+    banner()
+    url = input("Enter the URL to analyze: ")
+    check_url_length(url)
+    check_ip_address(url)
+
+main()
