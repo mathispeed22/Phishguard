@@ -1,4 +1,7 @@
 PhishGuard – URL Phishing Detection Tool. 
+PhishGuard is a Python-based cybersecurity tool that detects **phishing URLs** by analyzing suspicious patterns commonly used in phishing attacks.  
+This project is developed for **academic and educational purposes** to understand phishing detection and web security fundamentals.
+
 
 Project Description: 
 
